@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-family: 'Kanit', sans-serif;
+    white-space: nowrap;
+}
+#preloader{
+    background: rgb(255, 255, 255) url(../dashboard/preloader.gif) no-repeat center center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 400;
+}
+body{
+    height: 100vh;
+}
+
+/***sidebar***/
+.sidebarcontainer{
+    height: 100vh;
+    width: 23rem;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 0px 29px -8px rgba(0,0,0,0.82);
+    -webkit-box-shadow: 2px 0px 29px -8px rgba(0,0,0,0.82);
+    -moz-box-shadow: 2px 0px 29px -8px rgba(0,0,0,0.82);
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    z-index: 100;
+    gap: 20px;
+}
+/**top**//**top**//**top**//**top**//**top**//**top**/
+.sidebarcontainer .topbar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    padding:5px;
+}
+.sidebarcontainer .topbar .logoname{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.sidebarcontainer .topbar img{
+    width: 40px;
+}
+.sidebarcontainer .topbar h1{
+    font-size: 2rem;
+    color: #000235;
+    /* font-weight: 600; */
+}
+.sidebarcontainer .minitext{
+    font-size: 0.6rem;
+    color: #000235;
+    display: flex;
+    align-items: flex-end;
+    height: 30px;
+    width: 100%;
+    margin-left: -10px;
+}
+/**top**//**top**//**top**//**top**//**top**//**top**/
+
+
+
+
+/**Toggle Button**//**Toggle Button**//**Toggle Button**/
+nav .togglecont{
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin-left: 80px;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav .toggle{
+    height: auto;
+    width: 50px;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius:50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+/**Toggle Button**//**Toggle Button**//**Toggle Button**/
+
+
+
+
+
+
+/**mainbar**//**mainbar**//**mainbar**//**mainbar**/
+.sidebarcontainer .mainbar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 5px;
+}
+.sidebarcontainer .mainbar h2{
+    font-weight: 400;
+}
+.sidebarcontainer .mainbar i{
+    font-size: 40px;
+}
+.sidebarcontainer .tab_button{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+    transition: 0.3s;
+    border: none;
+}
+.sidebarcontainer .tab_button:hover{
+    border-width: 3px;
+    border-color: black;
+    border-style:dashed;
+    background-color: rgb(247, 0, 0);
+}
+.sidebarcontainer .tab_button:active{
+    border-width: 3px;
+    border-color: black;
+    border-style:dashed;
+    background-color: rgb(177, 13, 13);
+}
+
+.sidebarcontainer .tab_button.active{
+    border-width: 3px;
+    border-color: black;
+    border-style:double;
+    
+    background-color: rgb(13, 175, 13);
+}
+/**mainbar**//**mainbar**//**mainbar**//**mainbar**/
+
+
+
+
+/***Sidebar control***//***Sidebar control***/
+.sidebarcontainer.close{
+    width: 5.5rem;
+}
+.sidebarcontainer.close h1{
+    transition: 0.2s;
+    opacity: 0;
+}
+.sidebarcontainer.close h2{
+    transition: 0.2s;
+    opacity: 0;
+}
+.sidebarcontainer.close .minitext{
+    transition: 0.2s;
+    opacity: 0;
+}
+#main.open{
+    left: 5rem;
+    width: calc(100% - 5rem);
+    height: 100vh;
+}
+
+[data-tab-content]{
+    display: none;
+}
+.active[data-tab-content]{
+    display: block;
+}
+
+.coverpage.inactive{
+    display: none;
+}
+/***Sidebar control***//***Sidebar control***/
+
+
+
+
+/***main content ***/
+#main{
+    height: 99.5vh;
+    top:0;
+    left: 23rem;
+    width: calc(100% - 23rem);
+    box-shadow: -4px 0px 29px -8px rgba(0,0,0,0.82);
+    -webkit-box-shadow: -4px 0px 29px -8px rgba(0,0,0,0.82);
+    -moz-box-shadow: -4px 0px 29px -8px rgba(0,0,0,0.82);
+    transition: 0.5s;
+    position: relative;
+}
+#main .coverpage{
+    font-size: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    text-shadow: -2px 0px 18px rgba(71, 71, 74, 1);
+    position: absolute;
+}
+
+/*passwordmanager*/
+.main-container{
+    width: 130vh;
+    height: 80vh;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    top:8%;
+    left: 8%;
+    background-color: rgba(255, 255, 255, 0.781);
+    box-shadow: 0px 1px 27px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 27px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 27px -4px rgba(0,0,0,0.75);
+    border-radius: 1rem;
+    position: absolute;
+}
+
+
+
